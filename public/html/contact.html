@@ -1,0 +1,67 @@
+<div class="container" style="min-height:530px;">
+    <form class="well form-horizontal">
+        <fieldset>
+        <!-- Form Name -->
+        <legend>Patient Details</legend>
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-2 control-label">First Name</label>  
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  <input  name="first_name" ng-model="searchlist.name" placeholder="Patient Name" class="form-control"  type="text">
+                </div>
+            </div>
+          <label class="col-md-2 control-label" >Date of Birth</label> 
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                  <input name="DOB" placeholder="Date of Birth" ng-model="searchlist.dob" class="form-control"  type="text">
+                </div>
+            </div>
+        </div>
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-2 control-label">Contact</label>  
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+                  <input  name="contact" placeholder="Contact" ng-model="searchlist.contact" class="form-control"  type="text">
+                </div>
+            </div>
+          <label class="col-md-2 control-label" >City</label> 
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+                  <input name="city" placeholder="City" class="form-control" ng-model="searchlist.city"  type="text">
+                </div>
+            </div>
+        </div>
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-2 control-label">Description</label>  
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                  <input  name="description" placeholder="Description" ng-model="searchlist.description" class="form-control"  type="text">
+                </div>
+            </div>
+          <label class="col-md-2 control-label">Accession</label> 
+            <div class="col-md-4 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="glyphicon glyphicon-file"></i></span>
+                  <input name="last_name" placeholder="Accession" ng-model="searchlist.accession" class="form-control"  type="text">
+                </div>
+            </div>
+        </div>
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-2 control-label"></label>
+          <div class="col-md-2">
+            <button type="submit" ng-click="SubmitData()" class="btn btn-warning" >Submit <span class="glyphicon glyphicon-send"></span></button>
+          </div>
+           <div ng-if="submitsucces!=''"  class="alert alert-success col-md-4" role="alert" id="success_message">Data Submitted successfully</div>
+        </div>
+        </fieldset>
+    </form>
+</div><!-- /.container -->

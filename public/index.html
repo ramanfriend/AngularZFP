@@ -1,0 +1,58 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Search List</title>     
+        <link rel="stylesheet" type="text/css" href="css/style.css" />     
+        <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css" /> 
+        <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap-theme.min.css" />     
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />  
+   </head>
+<body style="background-color: lavender;" ng-app="PocApp">
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+            <li class="active"><a ui-sref="home">Home</a></li>    
+            <li><a ui-sref="newpatient">New Patient</a></li>        
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+        </div>
+    </div>
+  </nav>
+  <div ui-view></div>
+
+<footer class="container-fluid text-center">
+  <p>ZFP POC</p>
+</footer>
+
+<script src="/angular/angular.js"></script> 
+<script src="/angularuiroute/angular-ui-router.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+<script src="/node_modules/dicom-parser/dist/dicomParser.js"></script>
+
+
+<script src="app/poc.app.js"></script> 
+<script src="app/controller/homecontroller/home.module.js"></script>  
+<script src="app/controller/homecontroller/home.controller.js"></script> 
+<script src="app/controller/newpatientcontroller/newpatient.module.js"></script>  
+<script src="app/controller/newpatientcontroller/newpatient.controller.js"></script> 
+<script src="app/controller/patientdetailscontroller/patientdetails.module.js"></script>  
+<script src="app/controller/patientdetailscontroller/patientdetails.controller.js"></script> 
+<script src="app/controller/dicomparsercontroller/dicomparser.module.js"></script>  
+<script src="app/controller/dicomparsercontroller/dicomparser.controller.js"></script> 
+
+</body>
+</html>

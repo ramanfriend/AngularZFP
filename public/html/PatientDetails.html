@@ -1,0 +1,48 @@
+<div class="container" style="min-height:530px;">
+    <div class="well form-horizontal">
+        <fieldset>       
+        <legend>Patient Details</legend>
+        
+        <div class="form-group">
+          <label class="col-md-2 control-label">Name:-</label>  
+          <div contenteditable="true" class="col-md-3 control-label">{{dataobj.name}}</div>  
+          <label class="col-md-2 control-label" >Date of Birth:-</label> 
+          <div contenteditable="true" class="col-md-3 control-label" >{{dataobj.dob}}</div> 
+           
+        </div>
+         <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-2 control-label">Contact</label>  
+          <div contenteditable="true" class="col-md-3 control-label">{{dataobj.contact}}</div>  
+          <label class="col-md-2 control-label" >City</label> 
+          <div contenteditable="true" class="col-md-3 control-label" >{{dataobj.city}}</div> 
+           
+        </div>
+         <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-2 control-label">Description</label>  
+          <div contenteditable="true" class="col-md-3 control-label">{{dataobj.description}}</div>  
+          <label class="col-md-2 control-label" >Accession</label> 
+          <div contenteditable="true" class="col-md-3 control-label" >{{dataobj.accession}}</div> 
+           
+        </div>           
+        </fieldset>
+    </div>
+
+   <div class="panel panel-default ">
+            <div class="panel-heading">
+                <h2 class="panel-title">Patient Dicom Information</h2>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label class="control-label">File Name:-</label> <span>{{dataobj.dicomfile}}</span>
+                    </div>
+                    <div class="col-xs-6">
+                       <a class="btn btn-primary" ui-sref="dicomparser({ fileId: dataobj.dicomfile })"> View </a>
+                    </div>
+                </div>               
+            </div>
+    </div>
+
+</div><!-- /.container -->
